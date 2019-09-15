@@ -3,8 +3,12 @@
   width:80%;
   margin:auto;
   overflow:hidden;
-  margin-left:700px;
   padding-right: 50px;
+}
+img
+{
+  width:550px;
+  align:center;
 }
 
 .form-signin
