@@ -9,7 +9,8 @@
     <title>1-Bit | Welcome</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" type="text/css" href="./css/review.css">
+    <link rel="stylesheet" href="./css/stylecontact.css">
+    <link rel="stylesheet" href="./css/review.css">
   </head>
 
   <body>
@@ -75,31 +76,25 @@
         <p>Your review is valuable to us.It will let us know about your dissatisfaction and what we lack.You can rate us based on our service and also can help us to improve by giving suggestions.So,feel free to give review.</p>
         <h5>Thank You</h5>
         <br>
+
         <div id="add-new-div">
-            <h2 class="add-new-title" id="name-new-title">Post your review: :)</h2>
-            <div class="row">
-                <div class="col-lbl">
-                    <label for="name" class="input-lbl"> Name:</label>
-                </div>
-                <div class="col-txt">
-                    <input type="text" id="name" class="input-txt" name="name">
-                </div>
+          <div class="wrapper">
+            <div class="company-info">
+              <h3>Post your review: :)</h3>
+              <p>Inorder to contact us,please fill up the form and submit.</p>
             </div>
-
-            <div class="row">
-                <div class="col-lbl">
-                    <label for="email" class="input-lbl"> email:</label>
-                </div>
-                <div class="col-txt">
-                    <input type="email" id="email" class="input-txt" name="email">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-lbl">
-                    <label for="rating" class="input-lbl"> Rating:</label>
-                </div>
-                <div class="col-txt">
+            <div class="contact">
+              <form id=contactForm"">
+                <p class="full">
+                  <label>Name</label>
+                  <input type="text" name="name" id="name" required>
+                </p>
+                <p class="full">
+                  <label>Email</label>
+                  <input type="email" name="email" id="email" required>
+                </p>
+                <p class="full">
+                  <label>Rating</label>
                     <select id="rating" class="input-txt" name="rating">
                         <option value="1">1</option>
                         <option value="2">2</option>
@@ -112,27 +107,28 @@
                         <option value="9">9</option>
                         <option value="10">10</option>
                     </select>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-lbl">
-                    <label for="comment" class="input-lbl"> Comment:</label>
-                </div>
-                <div class="col-txt">
-                    <input type="text" id="comment" class="input-txt" name="comment">
-                </div>
+                </p>
+                <p class="full">
+                  <label>Comment</label>
+                  <textarea name="comment" rows="5" id="comment"></textarea>
+                </p>
+                <p>
+                  <button class="add-new-button" onclick="addPlace()"> Submit</button>
+                </p>
+                <p>
+                  <button class="add-new-reset" onclick="resetForm()"> Reset</button>
+                </p>
+                <p class="full">
+                  <a class="back" href="#" onclick="showTable()">Back to Tourist Place List</a>
+                </p>
+              </form>
             </div>
-
-            <div class="row" id="submit-div">
-                <button class="add-new-button" onclick="addPlace()"> Submit</button>
-                <button class="add-new-reset" onclick="resetForm()"> Reset</button>
-            </div>
-
-            <div>
-                <a class="back" href="#" onclick="showTable()">Back to Tourist Place List</a>
-            </div>
+          </div>
         </div>
+
+
+
 
         <!-- Tour places table -->
 

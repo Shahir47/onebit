@@ -9,6 +9,7 @@
     <title>1-Bit | Welcome</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/stylecontact.css">
   </head>
 
   <body>
@@ -95,7 +96,48 @@
   </div>
 </section>
 
+<div class="container">
+  <div class="wrapper">
+    <div class="company-info">
+        <h3>Contact Us:</h3>
+        <p>Inorder to contact us,please fill up the form and submit.</p>
+    </div>
+    <div class="contact">
+        <h3>Email Us</h3>
+        <div class="alert">Your message has been sent, Redirecting to Home</div>
+        <form id="contactForm">
+          <p>
+            <label>Name</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+          <p>
+            <label>Company</label>
+            <input type="text" name="company" id="company">
+          </p>
+          <p>
+            <label>Email Address</label>
+            <input type="email" name="email" id="email" required>
+          </p>
+          <p>
+            <label>Phone Number</label>
+            <input type="text" name="phone" id="phone">
+          </p>
+          <p class="full">
+            <label>Message</label>
+            <textarea name="message" rows="5" id="message"></textarea>
+          </p>
+          <p class="full">
+            <button type="submit">Submit</button>
+          </p>
+        </form>
+      </div>
+  </div>
+</div>
 
+<script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+
+<script src="contactus.js"></script>
 
 <!--footer-->
     <footer>
