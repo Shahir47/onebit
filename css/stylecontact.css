@@ -9,11 +9,10 @@ body{
   background-color:#f4f4f4;
 }
 
-.container1{
+.container{
   max-width:1170px;
   margin-left:auto;
   margin-right:auto;
-  padding:1em;
 }
 
 ul{
