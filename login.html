@@ -67,31 +67,52 @@
 <!--END of header & nav-bar-->
     <br>
     <br>
-    <div class="container1">
+    <div id="login_div" class="container1">
     <div class="row">
         <div class="col-sm-6 col-md-4 col-md-offset-4">
-            <h1 class="text-center login-title">Sign in to continue to Bootsnipp</h1>
+            <h1 class="text-center login-title">Sign in to continue to 1-Bit</h1>
             <div class="account-wall">
                 <img class="profile-img" src="https://lh5.googleusercontent.com/-b0-k99FZlyE/AAAAAAAAAAI/AAAAAAAAAAA/eu7opA4byxI/photo.jpg?sz=120"
                     alt="">
                 <form class="form-signin">
-                <input type="text" class="form-control" placeholder="Email" required autofocus>
-                <input type="password" class="form-control" placeholder="Password" required>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">
+                <input type="text"  id="email_field" class="form-control" placeholder="Email" required autofocus>
+                <input type="password" id="pass_field" class="form-control" placeholder="Password" required>
+                <button onclick="login()" class="btn btn-lg btn-primary btn-block">
                     Sign in</button>
-                <label class="checkbox pull-left">
-                    <input type="checkbox" value="remember-me">
-                    Remember me
-                </label>
-                <a href="#" class="pull-right need-help">Need help? </a><span class="clearfix"></span>
                 </form>
             </div>
             <a href="registration.html" class="text-center new-account">Create an account </a>
         </div>
     </div>
     </div>
+    <div id="user_div" class="loggedin-div">
+      <h3>welcome User</h3>
+      <p id="user_para">Welcome to 1-Bit,You are currently logged in.</p>
+      <button onclick="logout()">Logout</button>
+    </div>
     <br>
     <br>
+
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase.js"></script>
+
+    <script>
+  // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCkKpxvHegsjoibzKVzpZ1LdIP83vXzayY",
+        authDomain: "pcshop-a1ced.firebaseapp.com",
+        databaseURL: "https://pcshop-a1ced.firebaseio.com",
+        projectId: "pcshop-a1ced",
+        storageBucket: "",
+        messagingSenderId: "790080678035",
+        appId: "1:790080678035:web:40a624da6ca43327984566",
+        measurementId: "G-MMFW1QKB2Z"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="login.js"></script>
 
 <!--footer-->
     <footer>

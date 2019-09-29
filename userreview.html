@@ -84,7 +84,8 @@
               <p>Inorder to contact us,please fill up the form and submit.</p>
             </div>
             <div class="contact">
-              <form id=contactForm"">
+              <div class="alert">Your message has been sent, Redirecting to Home</div>
+              <form id="contactForm">
                 <p class="full">
                   <label>Name</label>
                   <input type="text" name="name" id="name" required>
@@ -114,7 +115,7 @@
                   <textarea name="comment" rows="5" id="comment"></textarea>
                 </p>
                 <p>
-                  <button class="add-new-button" onclick="addPlace()"> Submit</button>
+                  <button type="submit"> Submit</button>
                 </p>
                 <p>
                   <button class="add-new-reset" onclick="resetForm()"> Reset</button>
@@ -150,10 +151,14 @@
             <input type="button" value="Create New Tourist Place" class="backButton" onclick="BackToaddPlace()">
         </div>
 
-        <script src="main.js"></script>
+
+
         <br>
         <br>
     </div>
+    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <script src="review.js"></script>
 
 <!--footer-->
     <footer>
