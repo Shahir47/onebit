@@ -11,15 +11,20 @@ body{
   margin:auto;
   overflow:hidden;
 }
+.containernav{
+  width:70%;
+  margin:auto;
+  overflow:hidden;
+}
 
 ul{
   margin:0;
-  padding:0;
+  padding-bottom:5px;
 }
 
 .button_1{
   height:38px;
-  background:#e8491d;
+  background:#dba92c;
   border:0;
   padding-left: 20px;
   padding-right:20px;
@@ -38,9 +43,9 @@ ul{
 header{
   background:#1e3140;
   color:#ffffff;
-  padding-top:5px;
+  padding-top:10px;
   min-height:50px;
-  padding-bottom:5px;
+  padding-bottom:10px;
   border-bottom:#fafa32 2px solid;
 }
 
@@ -67,7 +72,7 @@ header #branding h1{
 
 header nav{
   float:right;
-  margin-top:8px;
+  margin-top:15px;
 }
 
 header .highlight, header .current a{
@@ -107,6 +112,10 @@ header a:hover{
 
 #newsletter h2{
   float:left;
+  color:#edbb3e;
+}
+footer p{
+  color:#edbb3e;
 }
 
 #newsletter form {
@@ -174,7 +183,7 @@ footer{
 
 /*MINE*/
 hr.new1 {
-  border-top: 1px solid white;
+  border-top: 1px solid #edbb3e;
   width:80%;
 }
 
@@ -186,8 +195,34 @@ hr.new1 {
 {
   text-align:left;
 }
-
+nav ul li a{
+  font-size:15px;
+}
 /*MINE-END*/
+/*DROPDOWN*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+.custom-select select {
+display: none; /*hide original SELECT element:*/
+}
+.select-selected {
+background-color: Black;
+}
+.select-items div,.select-selected {
+color: #ffffff;
+  padding: 18px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+#select-item:first-child {
+  display: none;
+}
+/*DROPDOWN END*/
+
 
 /* Media Queries */
 @media(max-width: 768px){

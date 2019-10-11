@@ -34,4 +34,5 @@ function login(){
 
 function logout(){
   firebase.auth().signOut();
+  document.getElementById('login_div').reset();
 }

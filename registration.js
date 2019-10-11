@@ -19,6 +19,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 function login(){
+  var userName=document.getElementById("name_field").value;
   var userEmail=document.getElementById("email_field").value;
   var userPass=document.getElementById("pass_field").value;
 
@@ -34,4 +35,5 @@ function login(){
 
 function logout(){
   firebase.auth().signOut();
+  document.getElementById('login_div').reset();
 }
