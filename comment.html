@@ -9,6 +9,9 @@
     <title>1-Bit | Welcome</title>
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
   </head>
 
   <body>
@@ -36,7 +39,6 @@
             </div>
             </li>
             <li class="current"><a href="contactus.html">Contact_Us</a></li>
-            <li class="current"><a href="wishlist.html">wishlist</a></li>
             <li class="current"><a href="login.html">login</a></li>
             <li class="current"><a href="about.html">About</a></li>
             <li class="current"><a href="userreview.html">User Review</a></li>
@@ -46,29 +48,60 @@
     </header>
 <!--END of header & nav-bar-->
 
+<div class="container">
+  <section id="showcase_1">
+              <div class="containernotun">
+          <div class="row">
+            <div class="col-sm-8" >
+                  <div class="content">
 
-<!--footer-->
-    <footer>
-<!--newsletter-->
-      <section id="newsletter">
-        <div class="container">
-          <h2>Subscribe To Our Newsletter</h2>
-          <form id="news">
-            <input type="email" id="email" placeholder="Enter Email...">
-            <button type="submit" class="button_1">Subscribe</button>
-          </form>
+                    <form id="add-cafe-form"></form>
+
+                    <ul id="cafe-list"></ul>
+
+                </div>
+             </div>
         </div>
-      </section>
-      <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+            </section>
+</div>
 
-      <script src="newsletter.js"></script>
+<script>
+          var firebaseConfig = {
+    apiKey: "AIzaSyCkKpxvHegsjoibzKVzpZ1LdIP83vXzayY",
+    authDomain: "pcshop-a1ced.firebaseapp.com",
+    databaseURL: "https://pcshop-a1ced.firebaseio.com",
+    projectId: "pcshop-a1ced",
+    storageBucket: "",
+    messagingSenderId: "790080678035",
+    appId: "1:790080678035:web:40a624da6ca43327984566"
+  };
+  firebase.initializeApp(firebaseConfig);
+          const db = firebase.firestore();
+          db.settings({ timestampsInSnapshots: true });
+  // Initialize Firebase
+
+        </script>
+
+        <script src="comment.js"></script>>
+<footer>
+<!--newsletter-->
+  <section id="newsletter">
+    <div class="container">
+      <h2>Subscribe To Our Newsletter</h2>
+      <form id="news">
+        <input type="email" id="email" placeholder="Enter Email...">
+        <button type="submit" class="button_1">Subscribe</button>
+      </form>
+    </div>
+  </section>
 <!--end newsletter-->
-      <hr class="new1">
-      <p>1-Bit Ltd &copy; 2019</p>
-    </footer>
+  <hr class="new1">
+  <p>1-Bit Ltd &copy; 2019</p>
+</footer>
+
+
 <!--End footer-->
 
-  </body>
+</body>
 
 </html>

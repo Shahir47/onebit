@@ -257,3 +257,48 @@ color: #ffffff;
     margin-bottom:5px;
   }
 }
+.containernotun{
+  width:100%;
+  margin:auto;
+  overflow:hidden;
+}
+.content ul{
+    padding-bottom: 10px;
+    color:white;
+    padding-left: 100px;
+
+
+}
+
+.content li{
+  list-style-type: square;
+    padding: 20px 0;
+    font-size: 20px;
+    color:black;
+    min-height: 100px;
+}
+
+.content li::first-line{
+    font-weight: bold;
+    color: #457371;
+    font-size: 45px;
+    background-color: red;
+}
+
+.content li span{
+    display: block;
+}
+
+
+
+.content li div{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: rgba(255,255,255,0.6);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+    cursor:  pointer;
+}

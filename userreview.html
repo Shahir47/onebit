@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/stylecontact.css">
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.0.3/firebase-firestore.js"></script>
   </head>
 
   <body>
@@ -37,7 +39,6 @@
             </div>
             </li>
             <li class="current"><a href="contactus.html">Contact_Us</a></li>
-            <li class="current"><a href="wishlist.html">wishlist</a></li>
             <li class="current"><a href="login.html">login</a></li>
             <li class="current"><a href="about.html">About</a></li>
             <li class="current"><a href="userreview.html">User Review</a></li>
@@ -56,7 +57,7 @@
         <p>Your review is valuable to us.It will let us know about your dissatisfaction and what we lack.You can rate us based on our service and also can help us to improve by giving suggestions.So,feel free to give review.</p>
         <h5>Thank You</h5>
         <br>
-
+        <setion>
         <div id="add-new-div">
           <div class="wrapper">
             <div class="company-info">
@@ -65,7 +66,7 @@
             </div>
             <div class="contact">
               <div class="alert">Your message has been sent, Redirecting to Home</div>
-              <form id="contactForm">
+              <form class="contactForm">
                 <p class="full">
                   <label>Name</label>
                   <input type="text" name="name" id="name" required>
@@ -74,7 +75,7 @@
                   <label>Email</label>
                   <input type="email" name="email" id="email" required>
                 </p>
-                <p class="full">
+                <!--<p class="full">
                   <label>Rating</label>
                     <select id="rating" class="input-txt" name="rating">
                         <option value="1">1</option>
@@ -89,7 +90,7 @@
                         <option value="10">10</option>
                     </select>
 
-                </p>
+                </p>-->
                 <p class="full">
                   <label>Comment</label>
                   <textarea name="comment" rows="5" id="comment"></textarea>
@@ -100,20 +101,38 @@
                 <p>
                   <button class="add-new-reset" onclick="resetForm()"> Reset</button>
                 </p>
-                <p class="full">
-                  <a class="back" href="#" onclick="showTable()">Back to Tourist Place List</a>
-                </p>
               </form>
             </div>
           </div>
         </div>
+      </setion>
+        <script>
+          var firebaseConfig = {
+    apiKey: "AIzaSyCkKpxvHegsjoibzKVzpZ1LdIP83vXzayY",
+    authDomain: "pcshop-a1ced.firebaseapp.com",
+    databaseURL: "https://pcshop-a1ced.firebaseio.com",
+    projectId: "pcshop-a1ced",
+    storageBucket: "",
+    messagingSenderId: "790080678035",
+    appId: "1:790080678035:web:40a624da6ca43327984566"
+  };
+  firebase.initializeApp(firebaseConfig);
+          const db = firebase.firestore();
+          db.settings({ timestampsInSnapshots: true });
+  // Initialize Firebase
 
+        </script>
 
+        <p><a href="comment.html">SEE THE REVIEW</a></p>
+        <p>
+        	<ol id="commentslist">
+        	</ol>
+        <p>
 
 
         <!-- Tour places table -->
 
-        <div id="tour-places-div">
+        <!--<div id="tour-places-div">
             <table class="tablePlace" id="table-places">
                 <thead>
                     <tr>
@@ -129,16 +148,15 @@
 
             </table>
             <input type="button" value="Create New Tourist Place" class="backButton" onclick="BackToaddPlace()">
-        </div>
+        </div>-->
 
 
 
         <br>
         <br>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/7.0.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
-    <script src="review.js"></script>
+
+    <script src="upload.js"></script>
 
 <!--footer-->
     <footer>
