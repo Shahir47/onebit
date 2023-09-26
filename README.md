@@ -4,5 +4,7 @@ Onebit is a website that is dedicated for computer hardware and software, especi
 Some previews of the Website:
 
 ![alt text](https://github.com/Shahir47/onebit/blob/master/Preview/Preview_1.png)
+
 ![alt text](https://github.com/Shahir47/onebit/blob/master/Preview/Preview_2.png)
+
 ![alt text](https://github.com/Shahir47/onebit/blob/master/Preview/Preview_3.png)
