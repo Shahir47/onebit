@@ -203,6 +203,7 @@ nav ul li a{
 .custom-select {
   position: relative;
   font-family: Arial;
+  margin-top: -8px;
 }
 .custom-select select {
 display: none; /*hide original SELECT element:*/
@@ -211,7 +212,7 @@ display: none; /*hide original SELECT element:*/
 background-color: Black;
 }
 .select-items div,.select-selected {
-color: #ffffff;
+ color: #ffffff;
   padding: 18px 16px;
   border: 1px solid transparent;
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
